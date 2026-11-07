@@ -7,7 +7,15 @@ Route::get('/', function () {
 });
 
 Route::get('/jobs', function() {
-    return view('jobs.index');
+    $title = 'Available Job';
+    $jobs = [
+       ' Web Developer',
+       'DB Admin',
+       'Software Engineer',
+       'System Admin'
+    ];
+
+    return view('jobs.index', compact('title', 'jobs'));
 })->name('jobs');
 
 Route::get('/jobs/create', function() {
