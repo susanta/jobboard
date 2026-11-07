@@ -11,11 +11,7 @@
     <h1>{{ $title }}</h1>
     <ul>
         @forelse ($jobs as $job)
-        @if($loop->even)
-        <li>Even {{ $job }}</li>
-        @else
         <li> {{ $job }}</li>
-        @endif
         @empty
         <l>No jobs available.</l>
         @endforelse
