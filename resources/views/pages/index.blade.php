@@ -1,15 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layout')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=`, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Welcome to Workopia</title>
-</head>
-
-<body>
-    <h1>Welcome to Workopia</h1>
-</body>
-
-</html>
+@section('content')
+<h1>Welcome to Workopia</h1>
+@endsection
