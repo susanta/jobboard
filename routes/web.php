@@ -10,27 +10,10 @@ Route::get('/jobs', function() {
     return '<h1>Available jobs</h1>';
 })->name('jobs');
 
-Route::get('/test', function() {
-    $url = route('jobs');
-    return "<a href='$url'>Click Here</a>";
-});
+Route::get('/post/{id}', function(string $id) {
+    return "Post" . $id;
+})->where('id', '[a-zA-Z]+');
 
-Route::post('/submit', function() {
-    return 'Post Submit';
-});
-
-Route::match(['get', 'post'], '/submit', function() {
-    return 'Post Submit';
-});
-
-// // any type of route
-// Route::any('/submit', function() {
-//     return 'Post Submit';
-// });
-
-Route::get('/api/users', function() {
-    return [
-        'name' => 'Example Name',
-        'email' => 'example@test.com'
-    ];
+Route::get('/post/{id}/comments/{commentId}', function(string $id, string $commentId) {
+    return "Post" . $id . "comment " . $commentId;
 });
