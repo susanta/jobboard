@@ -24,7 +24,6 @@
         <x-nav-link url="/login" :active="request()->is('login')" :mobile="true">Login</x-nav-link>
         <x-nav-link url="/register" :active="request()->is('register')" :mobile="true">Register</x-nav-link>
         <x-nav-link url="/dashboard" :active="request()->is('dashboard')" :mobile="true">Dashboard</x-nav-link>
-
         <x-button-link url="/jobs/create" icon="edit" :block="true">Create Job</x-button-link>
     </nav>
 </header>
