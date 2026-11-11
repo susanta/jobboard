@@ -50,13 +50,7 @@
             <x-inputs.text-area id="company_description" name="company_description" label="Company Description"
                 placeholder="Company Description" />
 
-            <div class="mb-4">
-                <label class="block text-gray-700" for="company_website">Company Website</label>
-                <input id="company_website" type="text" name="company_website"
-                    class="w-full px-4 py-2 border rounded focus:outline-none" placeholder="Enter website" />
-            </div>
-
-            <x-inputs.text id="company_website" name="company_website" label="Company Website"
+            <x-inputs.text id="company_website" name="company_website" label="Company Website" type="url"
                 placeholder="Enter website" />
 
             <x-inputs.text id="contact_phone" name="contact_phone" label="Contact Phone" placeholder="Enter phone" />
