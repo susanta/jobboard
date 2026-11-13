@@ -11,3 +11,8 @@
         "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
         "Noto Color Emoji";
 }
+
+/* fix modal blip before alpine load */
+[x-cloak] {
+    display: none !important;
+}
