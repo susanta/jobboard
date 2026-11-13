@@ -44,4 +44,10 @@ class User extends Authenticatable
         return $this->belongsToMany(Job::class, 'job_user_bookmarks')->withTimestamps();
     }
 
+    // Reation to appliants
+    public function applicants(): HasMany
+    {
+        return $this->hasMany(Applicant::class, 'user_id');
+    }
+
 }
