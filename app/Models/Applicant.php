@@ -11,8 +11,8 @@ class Applicant extends Model
         'job_id',
         'user_id',
         'full_name',
-        'contact_name',
         'contact_phone',
+        'contact_email',
         'message',
         'location',
         'resume_path'

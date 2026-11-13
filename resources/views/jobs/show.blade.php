@@ -89,7 +89,8 @@
                             <h3 class="text-lg font-semibold mb-4">
                                 Apply For {{ $job->title }}
                             </h3>
-                            <form action="" enctype="multipart/form-data">
+                            <form method="POST" action="{{ route('applicant.store', $job->id) }}"
+                                enctype="multipart/form-data">
                                 @csrf
                                 <x-inputs.text id="full_name" name="full_name" label="Full Name*" :required="true" />
                                 <x-inputs.text id="contact_phone" name="contact_phone" label="Contact Phone" />
@@ -97,7 +98,7 @@
                                     label="Contact Email*" :required="true" />
                                 <x-inputs.text-area id="message" name="message" label="Message" />
                                 <x-inputs.text id="location" name="location" label="Location" />
-                                <x-inputs.file id="resume_path" name="resume_path" label="Upload your resume (.pdf)*"
+                                <x-inputs.file id="resume" name="resume" label="Upload your resume (.pdf)*"
                                     :required="true" />
 
                                 <button type="submit"
