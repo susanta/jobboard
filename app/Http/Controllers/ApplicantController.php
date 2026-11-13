@@ -39,4 +39,14 @@ class ApplicantController extends Controller
         return redirect()->back()->with('success', 'Your application has been submitted!');
 
     }
+
+    // @desc Delete job applicant
+    // @route DELETE /applicant/{applicant}
+    public function destroy($id): RedirectResponse
+    {
+        $applicant = Applicant::findorFail($id);
+        $applicant->delete();
+        return redirect()->route('dashboard')->with('success', 'Applicant deleted succesfully!');
+
+    }
 }
