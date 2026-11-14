@@ -6,6 +6,8 @@ use App\Models\Applicant;
 use App\Models\Job;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\JobApplied;
 
 class ApplicantController extends Controller
 {
@@ -44,6 +46,9 @@ class ApplicantController extends Controller
         $application->user_id = auth()->id();
 
         $application->save();
+
+        // Send email to owner
+        Mail::to($job->user->email)->send(new JobApplied());
 
         return redirect()->back()->with('success', 'Your application has been submitted!');
 
